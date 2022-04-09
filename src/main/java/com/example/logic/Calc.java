@@ -1,5 +1,8 @@
 package com.example.logic;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Calc {
 
     public static String multiply(String first, String second) {
@@ -19,7 +22,7 @@ public class Calc {
         return answer.toString();
     }
 
-    public static String divide(String first, String second) {
+    public String divide(String first, String second) {
 
         Double firstD = null;
         Double secondD = null;
@@ -28,7 +31,7 @@ public class Calc {
         try {
             firstD = Double.parseDouble(first);
             secondD = Double.parseDouble(second);
-            if(secondD == 0) {
+            if (secondD == 0) {
                 return "don't divide by zero";
             }
         } catch (NumberFormatException e) {
@@ -39,7 +42,7 @@ public class Calc {
         return answer.toString();
     }
 
-    public static String minus(String first, String second) {
+    public String minus(String first, String second) {
 
         Double firstD = null;
         Double secondD = null;
@@ -56,7 +59,7 @@ public class Calc {
         return answer.toString();
     }
 
-    public static String plus(String first, String second) {
+    public String plus(String first, String second) {
 
         Double firstD = null;
         Double secondD = null;
